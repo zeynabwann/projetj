@@ -10,7 +10,6 @@ import com.ism.repository.database.ClientRepositoryBD;
 import com.ism.repository.database.UserRepositoryBD;
 import com.ism.services.impl.ClientServiceImpl;
 import com.ism.services.impl.UserServiceImpl;
-
 public class Main {
     public static void main(String[] args) {
         int choix;
@@ -30,7 +29,6 @@ public class Main {
             System.out.println("6-Quitter");
             choix = scanner.nextInt();
             scanner.nextLine();
-
             switch (choix) {
                 case 1:
                     Client client = new Client();
