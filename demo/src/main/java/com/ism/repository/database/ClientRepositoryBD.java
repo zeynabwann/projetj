@@ -31,7 +31,6 @@ public class ClientRepositoryBD extends RepositoryBDImpl<Client> implements Repo
                 client = new Client();
                 client.setSurname(rs.getString("surnom"));
                 client.setTelephone(rs.getString("telephone"));
-                client.setAddresse(rs.getString("adresse"));
             }
             rs.close();
         } catch (SQLException e) {
@@ -72,7 +71,6 @@ public class ClientRepositoryBD extends RepositoryBDImpl<Client> implements Repo
             stmt = connect.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, client.getSurname());
             stmt.setString(2, client.getTelephone());
-            stmt.setString(3, client.getAddresse());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             if (rs.next()) {
@@ -99,7 +97,6 @@ public class ClientRepositoryBD extends RepositoryBDImpl<Client> implements Repo
                 Client client = new Client();
                 client.setSurname(rs.getString("surname"));
                 client.setTelephone(rs.getString("telephone"));
-                client.setAddresse(rs.getString("addresse"));
                 clients.add(client);
             }
         } catch (SQLException | ClassNotFoundException e) {

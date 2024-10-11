@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.ism.repository.Repository;
+
 
 public class RepositoryJpaImpl<T> implements Repository<T> {
     private EntityManagerFactory emf;
@@ -27,6 +29,12 @@ public class RepositoryJpaImpl<T> implements Repository<T> {
         return this.em.CreateQuery("SELECT u FROM Client u", type).getResultList();
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'selectAll'");
+    }
+
+    @Override
+    public int insert(String sql) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insert'");
     }
 
 }

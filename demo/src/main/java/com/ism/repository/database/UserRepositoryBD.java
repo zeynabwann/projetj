@@ -45,7 +45,6 @@ public class UserRepositoryBD implements RepositoryUser<User> {
                 user.setLogin(rs.getString("login"));
                 user.setPassword(rs.getString("password"));
                 String typeString = rs.getString("role");
-                user.setRole(Role.valueOf(typeString));
                 user.setStatut(rs.getString("statut"));
                 comptes.add(user);
             }
@@ -72,7 +71,6 @@ public class UserRepositoryBD implements RepositoryUser<User> {
                 user.setLogin(rs.getString("login"));
                 user.setPassword(rs.getString("password"));
                 String typeString = rs.getString("role");
-                user.setRole(Role.valueOf(typeString));
                 user.setStatut(rs.getString("statut"));
                 comptes.add(user);
             }
@@ -99,7 +97,6 @@ public class UserRepositoryBD implements RepositoryUser<User> {
                 user.setLogin(rs.getString("login"));
                 user.setPassword(rs.getString("password"));
                 String typeString = rs.getString("role");
-                user.setRole(Role.valueOf(typeString));
                 user.setStatut(rs.getString("statut"));
             }
         } catch (ClassNotFoundException e) {
